@@ -10,8 +10,13 @@ def inc(instr):
             for j in range(i+1, len(str_l)):
                 str_l[j] = 'a'
             return "".join(str_l)
-        elif ord(str_l[i]) == 122:
+        elif ord(str_l[i]) == 122 and i != 0:
             str_l[i] = '0'
+            for j in range(i+1, len(str_l)):
+                str_l[j] = 'a'
+            return "".join(str_l)
+        elif ord(str_l[i]) == 122 and i == 0:
+            str_l[i] = '1'
             for j in range(i+1, len(str_l)):
                 str_l[j] = 'a'
             return "".join(str_l)
